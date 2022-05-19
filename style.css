@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    margin:0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.logo{
+    position: absolute;
+    top:3%;
+    z-index: 100;
+    font-size: 20px;
+    line-height: 0.8;
+    color: white;
+    margin-left: 60px;
+    text-transform: uppercase;
+    
+}
+.links{
+    position: absolute;
+    top:3%;
+    right:0;
+    z-index: 100;
+    margin-right:60px;
+
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+ul{
+    font-size: 22px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    
+}
+ul li{
+    margin:20px;
+
+}
+.container{
+    position: relative;
+    height:100vh;
+    width:120vw;
+    transform: translateX(-10%) skew(-14deg)
+}
+.game-container{
+    position: absolute;
+    height:100%;
+    width:100%;
+    display: flex;
+}
+
+.game{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width:100%;
+    flex: 3;  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: flex 1.1s ease;
+    position: relative; 
+    overflow: hidden;
+    filter:saturate(0) brightness(30%);
+    transition: flex 1.5s ease, filter .7s ease;
+}
+.game .picture{
+    position: absolute;
+    display: block;
+    height:100%;
+    margin:auto;
+    transform: skew(14deg) translateX(-30%);
+}
+
+.ds .picture{
+    transform: skew(14deg) translateX(-10%)
+}
+.game h2{
+    font-size: 44px;
+    color:white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+.ds h2{
+    transform: translateX(-17%);
+}
+.game.active h2{
+    opacity: 1;
+    z-index: 100;
+    transition: opacity 1.1s ease-in;
+}
+.game.active{
+    filter:saturate(100%) brightness(100%);
+    flex:6;
+    transition: flex 1.5s ease, filter 1.1s ease;
+}
+
+
+
+
